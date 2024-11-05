@@ -6,7 +6,7 @@ def test_business_logic_process_data():
     mock_api_client = MagicMock()
     mock_message_queue = MagicMock()
     mock_api_client.fetch_data.return_value = {"id": 1, "name": "Sample Data", "value": 100}
-    business_logic = BusinessLogic(api_client=mock_api_client, message_queue=mock_message_queue, num_workers=1)
+    business_logic = BusinessLogic(api_client=mock_api_client, message_queue=mock_message_queue)
 
     # Act
     business_logic.fetch_and_process_data()

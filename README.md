@@ -2,6 +2,7 @@
 
 This project simulates a backend service running in the cloud, developed using **FastAPI**. The service interacts with mock external APIs and sends processed data to a message queue. It is designed with scalability, modularity, and high-quality code in mind. This document provides an overview of the design, key components, scalability considerations, and instructions for running the application in a cloud environment.
 
+![Backend Architecture](scalable_backend_architecture.png)
 ---
 
 ## Table of Contents

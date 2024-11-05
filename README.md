@@ -8,12 +8,11 @@ This project simulates a backend service running in the cloud, developed using *
 ## Table of Contents
 1. [Design Overview](#design-overview)
 2. [Key Components](#key-components)
-3. [Scalability Considerations](#scalability-considerations)
-4. [Running the Program](#running-the-program)
+3. [Running the Program](#running-the-program)
     - [Local Setup](#local-setup)
     - [Running in a Docker Container](#running-in-a-docker-container)
     - [Deploying in a Cloud Environment](#deploying-in-a-cloud-environment)
-5. [Testing](#testing)
+4. [Testing](#testing)
 
 ---
 
@@ -45,24 +44,6 @@ This project is structured around **FastAPI**, a modern Python web framework ide
 
 5. **Unit Tests**: 
    - Basic unit tests are provided for testing individual components like the API Client and business logic. These use mock objects to simulate external dependencies.
-
----
-
-## Scalability Considerations
-
-This service is built with scalability in mind, particularly focusing on cloud deployments. Key scalability features include:
-
-1. **Horizontal Scaling**:
-   - The service can run multiple instances behind a load balancer. Each instance independently fetches data and processes it. Race conditions are avoided due to modular and isolated data processing.
-
-2. **Vertical Scaling**:
-   - The service can also scale vertically by increasing the computational resources allocated per instance (e.g., more CPU and memory).
-
-3. **Modularity**:
-   - Components (API Client, Business Logic, Message Queue) are designed to be independent, making it easy to replace or scale individual parts of the service.
-
-4. **Dependency Injection**:
-   - The use of dependency injection allows for easy swapping of components, which helps in testing and scaling different services without changing core logic.
 
 ---
 
@@ -121,6 +102,8 @@ This service is built with scalability in mind, particularly focusing on cloud d
    ```
 
 2. **Load Test with Locust**
+
+You can run a load test on this service using [Locust](https://locust.io/), a scalable user load testing tool.
 
 Run `locust` and set the target URL to http://localhost:8080 to distribute traffic to all FastAPI instances.
 

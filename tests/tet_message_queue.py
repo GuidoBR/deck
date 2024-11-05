@@ -1,5 +1,5 @@
 import unittest
-from message_queue import MessageQueue
+from app.services.message_queue import MessageQueue
 
 class TestMessageQueue(unittest.TestCase):
 

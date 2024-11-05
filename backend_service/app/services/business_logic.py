@@ -14,9 +14,11 @@ class BusinessLogic:
         self.api_client = api_client
         self.message_queue = message_queue
 
-    def fetch_and_process_data(self) -> None:
+    def fetch_and_process_data(self) -> Dict[str, Any]:
         """
         Fetch data from an API, process it, and enqueue the result to a message queue.
+
+        :return: Processed data
         """
         try:
             raw_data = self.api_client.fetch_data()
@@ -24,6 +26,8 @@ class BusinessLogic:
             processed_data = self.process_data(raw_data)
 
             self.message_queue.send_message(processed_data)
+
+            return processed_data
 
         except Exception as e:
             print(f"Error during data processing: {e}")
@@ -33,10 +37,10 @@ class BusinessLogic:
         Process the raw data fetched from the API.
         
         :param data: Raw data fetched from the API
-        :return: Processed data in a transformed format (e.g., JSON)
+        :return: Processed data
         """
         return {
-            "transformed_data": json.dumps(data),
+            "transformed_data": data,
             "status": "processed"
         }
 

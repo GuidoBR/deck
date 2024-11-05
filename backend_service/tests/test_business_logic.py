@@ -15,7 +15,7 @@ def test_business_logic_process_data():
     mock_api_client.fetch_data.assert_called_once()
     mock_message_queue.send_message.assert_called_once()
     expected_processed_data = {
-        "transformed_data": '{"id": 1, "name": "Sample Data", "value": 100}',
+        "transformed_data": {"id": 1, "name": "Sample Data", "value": 100},
         "status": "processed"
     }
     mock_message_queue.send_message.assert_called_with(expected_processed_data)

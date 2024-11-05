@@ -90,11 +90,11 @@ This service is built with scalability in mind, particularly focusing on cloud d
 
 3. **Run the FastAPI server**:
    ```bash
-   uvicorn app.main:app --reload
+   cd backend_service ; uvicorn app.main:app --reload --port 8080
    ```
 
 4. **Access the API**:
-   The API will be accessible at `http://127.0.0.1:8000/process`.
+   The API will be accessible at `http://127.0.0.1:8080/process`.
 
 ### Running in a Docker Container
 

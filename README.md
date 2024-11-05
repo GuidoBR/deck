@@ -113,6 +113,18 @@ This service is built with scalability in mind, particularly focusing on cloud d
 
 ---
 
+### Running multiple instances with Ngninx as a Load Balancer
+
+1. **Run the Load-Balanced App Locally**:
+   ```bash
+   docker-compose up --build
+   ```
+
+2. **Load Test with Locust**
+
+Run `locust` and set the target URL to http://localhost:8080 to distribute traffic to all FastAPI instances.
+
+
 ## Testing
 
 You can run unit tests using `pytest` to ensure each component works as expected.

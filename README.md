@@ -79,7 +79,7 @@ This service is built with scalability in mind, particularly focusing on cloud d
 #### Steps:
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/fastapi-backend-service.git
+   git clone git@github.com:GuidoBR/deck.git
    cd fastapi-backend-service
    ```
 
@@ -94,7 +94,7 @@ This service is built with scalability in mind, particularly focusing on cloud d
    ```
 
 4. **Access the API**:
-   The API will be accessible at `http://127.0.0.1:8080/process`.
+   The API will be accessible at `http://127.0.0.1:8080/docs`.
 
 ### Running in a Docker Container
 
@@ -105,11 +105,11 @@ This service is built with scalability in mind, particularly focusing on cloud d
 
 2. **Run the Docker container**:
    ```bash
-   docker run -p 8000:8000 fastapi-backend-service
+   docker run -p 8080:8080 fastapi-backend-service
    ```
 
 3. **Access the API**:
-   The API will be accessible at `http://localhost:8000/process`.
+   The API will be accessible at `http://127.0.0.1:8080/docs`.
 
 ---
 
